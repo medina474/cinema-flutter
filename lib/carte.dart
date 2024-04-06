@@ -4,7 +4,7 @@ import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 class CartePage extends StatefulWidget {
   final String title;
 
-  CartePage({super.key, required this.title});
+  const CartePage({super.key, required this.title});
 
   @override
   State<CartePage> createState() => _CartePageState();
@@ -30,10 +30,10 @@ class _CartePageState extends State<CartePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('Carte'),
+            title: const Text('Carte'),
             centerTitle: true,
             leading: IconButton(
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -45,14 +45,14 @@ class _CartePageState extends State<CartePage> {
           minZoomLevel: 8,
           maxZoomLevel: 14,
           userLocationMarker: UserLocationMaker(
-            personMarker: MarkerIcon(
+            personMarker: const MarkerIcon(
               icon: Icon(
                 Icons.location_history_rounded,
                 color: Colors.red,
                 size: 48,
               ),
             ),
-            directionArrowMarker: MarkerIcon(
+            directionArrowMarker: const MarkerIcon(
               icon: Icon(
                 Icons.double_arrow,
                 size: 48,
@@ -60,7 +60,7 @@ class _CartePageState extends State<CartePage> {
             ),
           ),
           roadConfiguration: RoadConfiguration(
-            startIcon: MarkerIcon(
+            startIcon: const MarkerIcon(
               icon: Icon(
                 Icons.person,
                 size: 64,
@@ -70,7 +70,7 @@ class _CartePageState extends State<CartePage> {
             roadColor: Colors.yellowAccent,
           ),
           markerOption: MarkerOption(
-              defaultMarker: MarkerIcon(
+              defaultMarker: const MarkerIcon(
             icon: Icon(
               Icons.person_pin_circle,
               color: Colors.blue,

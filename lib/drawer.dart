@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:cinema_flutter/video.dart';
 
 class CinemaDrawer extends StatelessWidget {
-  const CinemaDrawer({Key? key}) : super(key: key);
+  const CinemaDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CinemaDrawer extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => ActeursWidget(title: 'song'),
+                builder: (context) => const ActeursWidget(title: 'song'),
               ),
             );
           },
@@ -27,13 +27,13 @@ class CinemaDrawer extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => VideoPage(title: 'video'),
+                builder: (context) => const VideoPage(title: 'video'),
               ),
             );
           },
-          leading: Icon(Icons.thumb_up),
-          title: Text('Video')),
-      ListTile(
+          leading: const Icon(Icons.thumb_up),
+          title: const Text('Video')),
+      const ListTile(
           /*
           onTap: () {
             Navigator.of(context).push(

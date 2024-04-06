@@ -91,7 +91,7 @@ class _ActeursWidgetState extends State<ActeursWidget> {
                     });
                   })
             ]),
-        drawer: CinemaDrawer(),
+        drawer: const CinemaDrawer(),
         body: FutureBuilder(
           future: getData(""),
           builder: (BuildContext context,
